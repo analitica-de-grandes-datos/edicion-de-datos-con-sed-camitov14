@@ -43,7 +43,7 @@
 #
 sed 's/,/./g' data.csv > data1.csv
 sed 's/;/,/g' data1.csv > data2.csv
-sed 's/\(.*)\/\U\1/g' data2.csv > data1.csv
+sed 's/\(.*\)/\U\1/g' data2.csv > data1.csv
 sed 's/,N/,\\N/g' data2.csv > data1.csv
 sed 's/N,$/N,\\N/g' data1.csv > data2.csv
 sed 's/,,/,\\N,\\N/g' data2.csv > data1.csv
